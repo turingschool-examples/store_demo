@@ -1,0 +1,132 @@
+@import "bootstrap";
+body {
+  padding-top: 60px;
+  background-color: rgba(68, 117, 123, 0.32);
+  color: #395974;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 100%;
+}
+
+@import "bootstrap-responsive";
+
+// Nav Bar
+.logo-pic {
+  float: left;
+}
+
+.logo-text {
+  float: left;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: -10px;
+}
+
+.nav-buttons {
+  margin-top: 20px;
+}
+
+.navbar a.brand {
+  font-size: 250%;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #b61435;
+  padding-top:18px;
+}
+
+.navbar a.brand:hover {
+  color:  #536b71;
+}
+
+.navbar .navbar-inner{
+  //background: url('texture.jpg') repeat fixed center;
+}
+
+//Use this to change the height of the navbar -- may push over the main content
+.navbar .nav{
+  height:50px;
+}
+
+
+// This makes the scrolly hr rule as seen on homepage
+/* Single-direction drop shadow */
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
+}
+
+
+//Cart, Category, and Search Buttons, can recreate at http://http://twitterbootstrapbuttons.w3masters.nl/
+
+.btn-custom-lighten.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+.btn-custom-lighten {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #c8163a;
+  background-image: -moz-linear-gradient(top, #b61435, #e41942);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b61435), to(#e41942));
+  background-image: -webkit-linear-gradient(top, #b61435, #e41942);
+  background-image: -o-linear-gradient(top, #b61435, #e41942);
+  background-image: linear-gradient(to bottom, #b61435, #e41942);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb61435', endColorstr='#ffe41942', GradientType=0);
+  border-color: #e41942 #e41942 #9f112e;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #e41942;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-custom-lighten:hover,
+.btn-custom-lighten:focus,
+.btn-custom-lighten:active,
+.btn-custom-lighten.active,
+.btn-custom-lighten.disabled,
+.btn-custom-lighten[disabled] {
+  color: #ffffff;
+  background-color: #e41942;
+  *background-color: #cd173c;
+}
+.btn-custom-lighten:active,
+.btn-custom-lighten.active {
+  background-color: #b61435 ;
+}
+
+.btn-custom-lighten.dropdown-toggle span.caret{
+  color: #fff;
+  border-top: 4px solid #fff;
+}
+
+
+.btn-group.open .btn.dropdown-toggle{
+  background-color:#b61435;
+}
+
+
+
+// FOOTER INFO ############################################################
+#footer{
+  height: 75px;
+  width: 100%;
+  position: relative;
+  top: 40px;
+  left: 0px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#footer a {
+  color: #395974;
+}
+#footer a:hover {
+  color:  #b61435;
+}
+#footer #github {
+  max-width: 50%;
+}
+
+#love {
+  color: #777;
+}

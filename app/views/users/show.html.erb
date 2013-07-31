@@ -1,0 +1,17 @@
+<div class="user-index">
+  <%= render partial: 'user_navigation', :locals => { active: :account_details } %>
+
+  <div class="span8">
+    <h1><%= t('account.edit')%></h1>
+    <hr>
+    <%= simple_form_for @user do |f| %>
+        <%= f.input :full_name, input_html: { placeholder: t('placeholder.user.fullname') } %>
+        <%= f.input :email, input_html: { placeholder: t('placeholder.user.email') } %>
+        <%= f.input :display_name, input_html: { placeholder: t('placeholder.user.displayname') } %>
+        <%= f.input :password %>
+        <%= f.input :password_confirmation %>
+        <%= f.hidden_field :admin, value: false %>
+        <%= f.submit t('account.update'), class: 'btn btn-custom-lighten' %>
+    <% end %>
+  </div>
+</div>

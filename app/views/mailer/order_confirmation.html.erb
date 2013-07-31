@@ -1,0 +1,16 @@
+Dear <%= @user.full_name.titleize %>,
+<br>
+<br>
+Thanks so much for your purchase of:
+<br>
+<% @order.order_items.each do |order_item| %>
+<%= order_item.quantity %>x <%= order_item.title %>
+<br>
+<% end %>
+<br>
+We've processed your payment for <%= number_to_currency(@order.total) %>.
+<br>
+<br>
+We hope you stop by again!
+<br>
+Frank's Monsterporium

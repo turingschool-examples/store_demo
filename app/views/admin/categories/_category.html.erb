@@ -1,0 +1,20 @@
+<thead>
+  <tr>
+    <th><%= category.title %> <%= link_to t('crud.edit'), edit_admin_category_path(category) %></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>
+      <%= t('categories.n_products', n: category.products.count) %>
+      <%= link_to t('categories.see_all_products'), products_admin_category_path(category) %>
+    </td>
+  </tr>
+  <% if category.products.count == 0 %>
+    <tr>
+      <td>
+        <%= t('categories.noproducts') %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>

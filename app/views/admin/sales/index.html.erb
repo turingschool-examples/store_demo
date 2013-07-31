@@ -1,0 +1,30 @@
+<div class="admin-sales-index">
+  <%= render partial: 'shared/admin_navigation', :locals => { active: :sales }  %>
+
+  <div class="span8">
+    <h1><%= t('sale.collection') %></h1>
+    <hr>
+
+    <div class="pull-right">
+      <%= button_to t('sale.create'),
+                    new_admin_sale_path,
+                    method: :get,
+                    class: 'btn btn-large btn-custom-lighten' %>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t('sale.productcategory') %></th>
+          <th><%= t('sale.percentoff') %></th>
+          <th><%= t('model.createdat') %></th>
+          <th><%= t('model.status') %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @sales %>
+      </tbody>
+    </table>
+  </div>
+</div>

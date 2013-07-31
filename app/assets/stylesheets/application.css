@@ -1,0 +1,56 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* For the Shopping Cart Show Page*/
+#shopping_cart_summary {
+  float: right;
+}
+
+/* This is the sidebar nav used for user account and admin stuff*/
+.nav-list li.nav-header{
+  color: #b61435;
+}
+
+.nav-list li a {
+  color: rgb(57, 89, 116) ;
+}
+.nav-list li a:hover {
+  color: #b61435;
+}
+
+.nav-list li.active a {
+  background-color: #b61435;
+  color:#fff;
+}
+
+.nav-list li.active a:hover {
+  background-color: rgb(57, 89, 116);
+  color: #fff;
+}
+/* Color Tabs in Admin Dashboard*/
+.nav-pills li{
+  margin: 0 3px 0 3px;
+}
+.nav-pills a{
+  color: rgb(57, 89, 116);
+  border: 1px solid #b61435;
+}
+
+.nav-pills li.active a{
+  background-color: #b61435;
+}
+.nav-pills li.active a:hover{
+  background-color: rgb(57, 89, 116);
+  border: 1px solid rgb(57, 89, 116);
+}

@@ -1,0 +1,27 @@
+<tr>
+  <td><%= sale.item.title %></td>
+  <td><%= sale.percent_off %> %</td>
+  <td><%= sale.created_at.to_s(:short) %></td>
+  <td><%= sale.status %></td>
+  <td>
+    <div class="btn-group">
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <%= t('model.modify') %> <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li>
+          <%= link_to activate_or_end_translation(sale.status),
+                      toggle_status_admin_sale_path(sale),
+                      :method => :post %>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to t('crud.delete'),
+                      admin_sale_path(sale),
+                      confirm: t('confirm'),
+                      method: :delete %>
+        </li>
+      </ul>
+    </div>
+  </td>
+</tr>
