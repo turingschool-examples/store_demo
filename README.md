@@ -1,5 +1,7 @@
 # Store Demo
 
+* [Performance Workshop](https://github.com/JumpstartLab/store_demo/tree/performance-workshop)
+
 ### Setup
 
 Clone the repo, then run:
