@@ -16,7 +16,7 @@ StoreEngine::Application.routes.draw do
 
   resources :sessions, only: [ :new, :create, :destroy ]
   resources :products, only: [ :index, :show ] do
-    resources :ratings
+    resources :ratings, except: [ :index, :show, :destroy ]
   end
 
   resource :cart, only: [ :update, :show, :destroy ] do
