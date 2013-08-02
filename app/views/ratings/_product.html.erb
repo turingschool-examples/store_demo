@@ -1,27 +1,27 @@
 <tr>
-<td>
-  <%= link_to product.title, product_path(product) %>
-</td>
-<% if rating = ratings[product.id] %>
-<td>
-  <div id="star-rating<%= rating.id %>"></div>
-  <script>
-    $('#star-rating<%= rating.id %>').raty({ readOnly: true, score: <%= rating.stars %> });
-  </script>
-</td>
-<td>
-  <%= rating.created_at.to_s(:short) %>
-</td>
-<td>
-  <% if rating.editable? %>
-  <%= button_to t('crud.edit'), edit_product_rating_path(product, rating), method: :get, class: "btn btn-mini inactive" %>
+  <td>
+    <%= link_to product.title, product_path(product.id) %>
+  </td>
+  <% if product.rated? %>
+    <td>
+      <div id="star-rating<%= product.rating_id %>"></div>
+      <script>
+        $('#star-rating<%= product.rating_id %>').raty({ readOnly: true, score: <%= product.stars %> });
+      </script>
+    </td>
+    <td>
+      <%= product.rated_at.to_s(:short) %>
+    </td>
+    <td>
+      <% if product.rating_editable? %>
+        <%= button_to t('crud.edit'), edit_product_rating_path(product.id, product.rating_id), method: :get, class: "btn btn-mini inactive" %>
+      <% end %>
+    </td>
+  <% else %>
+    <td>
+      <%= link_to t('ratings.please'), new_product_rating_path(product.id) %>
+    </td>
+    <td></td>
+    <td></td>
   <% end %>
-</td>
-<% else %>
-<td>
-  <%= link_to t('ratings.please'), new_product_rating_path(product) %>
-</td>
-<td>
-</td>
-<% end %>
 </tr>

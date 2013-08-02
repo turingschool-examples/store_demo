@@ -19,6 +19,10 @@ class Order < ActiveRecord::Base
     end
   end
 
+  def self.by(user)
+    where(user_id: user.id)
+  end
+
   def self.create_and_charge(params)
     order = create(status: 'pending', user_id: params[:user].id)
 
