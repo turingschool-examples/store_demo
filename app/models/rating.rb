@@ -7,9 +7,8 @@ class Rating < ActiveRecord::Base
   validates :body, presence: true
   validates :stars, presence: true, inclusion: 0..5
 
-  def display_name
-    user = User.find(user_id)
-    user.display_name.present? ? user.display_name : 'Anonymous'
+  def user
+    @user ||= User.find(user_id)
   end
 
   def editable?

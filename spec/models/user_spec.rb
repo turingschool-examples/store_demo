@@ -27,4 +27,12 @@ describe User do
     expect(FactoryGirl.build(:user, display_name: 'p' * 33)).to_not be_valid
     expect(FactoryGirl.build(:user, display_name: 'p' * 32)).to be_valid
   end
+
+  it 'uses the display name if present' do
+    expect(User.new(display_name: 'alice').display_name).to eq('alice')
+  end
+
+  it 'defaults display name to anonymous' do
+    expect(User.new.display_name).to eq("Anonymous")
+  end
 end

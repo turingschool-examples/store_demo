@@ -16,4 +16,8 @@ class User < ActiveRecord::Base
   def default_values
     self.admin = false
   end
+
+  def display_name
+    read_attribute(:display_name) || "Anonymous"
+  end
 end
