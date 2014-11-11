@@ -29,7 +29,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'sqlite3'
   gem 'factory_girl_rails'
-  gem 'debugger'
+  gem 'debugger2', git: 'git://github.com/ko1/debugger2.git'
   gem 'capybara'
   gem 'simplecov'
   gem 'quiet_assets'

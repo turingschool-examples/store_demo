@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/ko1/debugger2.git
+  revision: 868f94f8b67e13f3cd3921be15168dcebf2e7019
+  specs:
+    debugger2 (1.0.0.beta2)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+
+GIT
   remote: https://github.com/stripe/stripe-ruby
   revision: 56f9ba200fcdf70728742a4e5ab8c2d24f3fbaba
   specs:
@@ -56,13 +64,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
-    columnize (0.3.6)
-    debugger (1.5.0)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.0)
+    columnize (0.8.9)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.0)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -232,7 +235,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara
   coffee-rails (~> 3.2.1)
-  debugger
+  debugger2!
   factory_girl_rails
   faker
   guard-rspec
