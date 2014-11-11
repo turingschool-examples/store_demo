@@ -1,13 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.1.3'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'rake'
 gem 'bootstrap-sass'
 gem 'simple_form'
-gem 'jquery-rails'
 gem 'sorcery'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'will_paginate'
